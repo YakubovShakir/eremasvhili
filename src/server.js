@@ -2,7 +2,6 @@ const express = require("express");
 const path = require("path");
 const app = express();
 
-// Статика из src/public
 app.use(express.static(path.join(__dirname)));
 
 // Страницы из src/pages

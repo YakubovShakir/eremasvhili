@@ -1,0 +1,14 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "devCommand": "npm run dev",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/writing", "destination": "/writing.html" },
+    { "source": "/photography", "destination": "/photography.html" },
+    { "source": "/videography", "destination": "/videography.html" },
+    { "source": "/projects", "destination": "/projects.html" }
+  ]
+}
