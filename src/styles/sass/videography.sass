@@ -1,0 +1,43 @@
+
+.videography
+    padding-top: 3.5%
+    &-wrapper
+        width: 86%
+        margin: auto
+        height: 80%
+        a
+            margin-bottom: 5%
+            div
+                position: absolute
+                top: 20%
+                left: 2%
+                font-style: italic
+                opacity: 0
+                transition: opacity ease 1200ms
+                span
+                    &:first-child
+                        font-size: clamp(1.3rem, 1.9vw, 3rem)
+                        display: block
+                        margin-bottom: 7%
+                    &:last-child
+                        font-size: clamp(0.6rem, 1vw, 2.5rem)
+            &:hover div
+                opacity: 1
+        video
+            width: 100%
+            display: block
+    &-footer-menu
+        padding-top: 5%
+        padding-right: 0
+        justify-content: center
+        a
+            width: clamp(10vw, 252px, 30vw)
+            aspect-ratio: 0.7
+            div
+                font-size: clamp(1rem, 1.7vw, 60rem)
+                font-weight: 300
+                span
+                    &:first-child
+                        font-size: clamp(2.5rem, 3.6vw, 6.6rem)
+                    &:last-child
+                        font-size: clamp(1rem, 1.5vw, 6.6rem)

@@ -1,0 +1,40 @@
+.photography-wrapper {
+  width: 100%;
+  padding-top: 2.5%;
+  padding-left: 8%;
+  display: flex;
+  gap: 11%;
+}
+.photography-column {
+  display: inline-block;
+  width: 22%;
+  height: 100%;
+}
+.photography-column img {
+  object-fit: contain;
+  margin-bottom: 22%;
+}
+.photography-column:nth-of-type(2) {
+  margin-top: 10.5%;
+}
+.photography-footer-menu {
+  padding-top: 5%;
+  padding-right: 0;
+  justify-content: center;
+}
+.photography-footer-menu a {
+  width: clamp(10vw, 252px, 30vw);
+  aspect-ratio: 0.7;
+}
+.photography-footer-menu a div {
+  font-size: clamp(1rem, 1.7vw, 60rem);
+  font-weight: 300;
+}
+.photography-footer-menu a div span:first-child {
+  font-size: clamp(2.5rem, 3.6vw, 6.6rem);
+}
+.photography-footer-menu a div span:last-child {
+  font-size: clamp(1rem, 1.5vw, 6.6rem);
+}
+
+/*# sourceMappingURL=photography.css.map */

@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/css/index.css" />
+    <link rel="stylesheet" href="styles/css/about.css" />
+    <title>About</title>
+  </head>
+  <body class="about">
+    <img class="about-arrow" src="assets/right_arrow.png" alt="image" />
+
+    <div class="video-background">
+      <video autoplay loop muted playsinline poster="assets/poster.jpg">
+        <source src="assets/background.mp4" type="video/mp4" />
+        <!-- Ваш браузер не поддерживает видео. -->
+      </video>
+    </div>
+    <div id="about-fly-figure">20</div>
+    <div class="about-title">about</div>
+    <section class="about-intro">
+      <p>Ciao !</p>
+      <p>
+        My name is Aleksandra, I am 21 years old and I am an art director based
+        in Florence, Italy.
+      </p>
+      <p>These are the fields I work in :</p>
+      <p>
+        Film direction, Video production, Scriptwriting, Copywriting, Narrative,
+        Event organizing, Curation, Photography, Visual & textual research, Art
+        direction
+      </p>
+    </section>
+    <section class="about-years">
+      <div class="about-years-item">
+        <div id="first-title" class="about-years-item-title">25</div>
+        <div class="about-years-item-descr">
+          <span>Undergraduate in Art Direction, Polimoda, Firenze</span>
+          <!-- Закрыл -->
+          <span
+            >Video production, Photography, Graphic design, Independent
+            Publishing,<br />
+            Performance & Installation</span
+          >
+        </div>
+      </div>
+      <div class="about-years-item">
+        <div class="about-years-item-title">24</div>
+        <div class="about-years-item-descr">
+          <span>Scuola di cinema independente, Firenze</span>
+          <!-- Закрыл -->
+          <span>Scriptwriting, DOP, Post production, Film directing</span>
+        </div>
+      </div>
+      <div class="about-years-item">
+        <div class="about-years-item-title">22</div>
+        <div class="about-years-item-descr">
+          <span>Foundation in Fashion, Istituto Marangoni, Milan</span>
+          <!-- Закрыл -->
+          <span>Business, Styling, Design</span>
+        </div>
+      </div>
+      <div id="last-title" class="about-years-item">
+        <div class="about-years-item-title">21</div>
+        <div class="about-years-item-descr">
+          <span
+            >Fashion Business, British Higher School of Art and Design,
+            Moscow</span
+          >
+          <span>Marketing, Communication, Consumer Behavior</span>
+        </div>
+      </div>
+    </section>
+    <footer class="about-footer">
+      <a href="https://www.instagram.com/ea_l_e/" target="_blank" dark-hover">INSTAGRAM</a>
+      <a href="https://www.linkedin.com/in/aleksandra-eremashvili-a0484022b/" target="_blank" class="dark-hover">LINKEDIN</a>
+    </footer>
+
+    <div class="home-link">
+      <a href="/" class="dark-hover">Home</a>
+    </div>
+  </body>
+  <script>
+    const flyFigure = document.getElementById("about-fly-figure");
+    const figure_rect = flyFigure.getBoundingClientRect();
+    const first_title = document.getElementById("first-title");
+    const title_rect = first_title.getBoundingClientRect();
+    const last_title = document.getElementById("last-title");
+    const last_rect = last_title.getBoundingClientRect();
+
+    const figure_y = figure_rect.top + window.scrollY;
+    const title_y = title_rect.top + window.scrollY;
+    const last_title_y = last_rect.y + window.scrollY;
+
+    console.log("Last_rect_top " + last_title_y)
+
+    const opacity_value = figure_y > title_y ? 1 : 0;
+    flyFigure.style.opacity = opacity_value;
+
+    window.addEventListener("scroll", function (event) {
+      const figure_y = figure_rect.top + window.scrollY;
+
+      const opacity_value =
+        figure_y > title_y ? 1 : 1 - (title_y - figure_y) / 700;
+              flyFigure.style.opacity = opacity_value;
+
+      if (title_y > figure_y && title_y - figure_y < 500) {
+        flyFigure.style.top = "50%";
+      } else if (title_y > figure_y && title_y - figure_y > 500) {
+        flyFigure.style.top = "34%";
+      }
+
+      if (figure_y > last_title_y) {
+        flyFigure.style.top = last_title_y - window.scrollY + "px"
+      }
+      console.log(figure_y > last_title_y);
+    });
+  </script>
+</html>

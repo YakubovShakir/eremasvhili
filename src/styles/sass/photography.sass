@@ -1,0 +1,31 @@
+.photography
+    &-wrapper
+        width: 100%
+        padding-top: 2.5%
+        padding-left: 8%
+        display: flex
+        gap: 11%
+    &-column
+        display: inline-block
+        width: 22%
+        height: 100%
+        img
+            object-fit: contain
+            margin-bottom: 22%
+        &:nth-of-type(2)
+            margin-top: 10.5%
+    &-footer-menu
+        padding-top: 5%
+        padding-right: 0
+        justify-content: center
+        a
+            width: clamp(10vw, 252px, 30vw)
+            aspect-ratio: 0.7
+            div
+                font-size: clamp(1rem, 1.7vw, 60rem)
+                font-weight: 300
+                span
+                    &:first-child
+                        font-size: clamp(2.5rem, 3.6vw, 6.6rem)
+                    &:last-child
+                        font-size: clamp(1rem, 1.5vw, 6.6rem)

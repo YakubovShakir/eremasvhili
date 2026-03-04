@@ -1,0 +1,85 @@
+.projects {
+  padding-left: 1.4%;
+  padding-bottom: 5.3%;
+}
+.projects-title {
+  font-size: clamp(1rem, 4.8vw, 5.8rem);
+  font-weight: 400;
+  margin-bottom: 3.5%;
+}
+.projects-wrapper {
+  width: 100%;
+  height: 80%;
+}
+.projects-item {
+  width: 100%;
+  margin-bottom: 3.5%;
+  display: flex;
+  justify-content: space-between;
+}
+.projects-item:last-of-type {
+  margin-bottom: 0;
+}
+.projects-item:nth-of-type(1) span {
+  color: rgb(192, 126, 54);
+}
+.projects-item:nth-of-type(1) a {
+  background-color: rgb(192, 126, 54);
+}
+.projects-item:nth-of-type(2) span {
+  color: rgb(144, 188, 200);
+}
+.projects-item:nth-of-type(2) a {
+  background-color: rgb(144, 188, 200);
+}
+.projects-item:nth-of-type(3) span {
+  color: rgb(185, 159, 215);
+}
+.projects-item:nth-of-type(3) a {
+  background-color: rgb(185, 159, 215);
+}
+.projects-item:nth-of-type(4) span {
+  color: rgb(148, 160, 112);
+}
+.projects-item:nth-of-type(4) a {
+  background-color: rgb(148, 160, 112);
+}
+.projects-item-name {
+  width: 80%;
+  font-size: clamp(1rem, 6.5vw, 7.45rem);
+}
+.projects-item-link {
+  width: 20%;
+  padding-top: 0.5%;
+  padding-right: 2.9%;
+  font-size: clamp(0.3rem, 1.5vw, 1.7rem);
+  font-weight: 300;
+  text-align: end;
+}
+.projects-item-link span {
+  width: 50%;
+  margin-right: 8%;
+  letter-spacing: 1px;
+}
+.projects-item-link a {
+  width: 28%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: green;
+  position: relative;
+  display: inline-flex;
+  padding: 2%;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+.projects-item-link a img {
+  width: 60%;
+  object-fit: fill;
+  filter: brightness(0) invert(1);
+}
+.projects-item-link a:hover {
+  transform: rotate(45deg);
+}
+
+/*# sourceMappingURL=projects.css.map */

@@ -1,0 +1,91 @@
+.header
+    height: 10%
+    width: 100%
+    text-align: center
+    position: relative
+    &-wrap
+        color: #fff
+        width: 99%
+        text-align: center
+        a
+            font-size: clamp(1.5rem, 1.55vw, 3rem)
+        a:nth-child(1)
+            margin-right: 3.1%
+    &-links
+        width: 10.4%
+        position: absolute
+        top: 0
+        right: 0
+        a
+            width: 18.1%
+            aspect-ratio: 1
+            padding: 4.4px
+            border-radius: 50%
+            background-color: #fff
+            display: inline-flex
+            justify-content: center
+            overflow: hidden
+            img
+                width: 95%
+                aspect-ratio: 1
+                object-fit: cover
+    &-links a:nth-child(2)
+        margin-left: 5px
+        img
+            scale: 1.2
+.home-links
+    padding-top: 11.8%
+    padding-right: 7.5vw
+    width: 100%
+    display: flex
+    gap: 2.1%
+    justify-content: end
+    height: 60%
+    a
+        width: clamp(15vw,222px, 30vw)
+        display: inline-block
+        overflow: hidden
+        position: relative
+        video
+            width: 100%
+            height: clamp(14rem, 100%, 40rem)
+            object-fit: cover
+        img
+            width: 100%
+            height: clamp(14rem, 100%, 40rem)
+            object-fit: cover
+        div
+            z-index: 1
+            position: absolute
+            color: #fff
+            font-weight: 500
+            top: 43.9%
+            left: 1.5%
+            span
+                &:first-child
+                    font-size: clamp(1.3rem, 5.9vw, 6rem)
+                    display: block
+                    margin-bottom: 3%
+                &:last-child
+                    font-size: clamp(0.7rem, 1.9vw, 3.5rem)
+
+    a::before
+        position: absolute
+        content: ""
+        z-index: 1
+        bottom: 0
+        right: 0%
+        width: 35%
+        height: 17%
+        background: url('../../assets/right_arrow.png') no-repeat center
+        background-size: contain
+.home-footer
+    width: 100%
+    padding-top: 1%
+    padding-left: 5%
+    img
+        width: 36%
+        object-fit: contain
+    h1
+        font-size: clamp(1rem,5.3vw,6.1rem)
+        margin-left: -0.3%
