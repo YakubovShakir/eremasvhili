@@ -39,6 +39,6 @@ app.get("/about", (req, res) => {
 //   res.status(404).sendFile(path.join(__dirname, "pages", "404.html"));
 // });
 
-app.listen(3000, () => {
+app.listen(3000, "127.0.0.1", () => {
   console.log("🚀 http://localhost:3000");
 });
