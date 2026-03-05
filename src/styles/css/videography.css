@@ -7,7 +7,9 @@
   height: 80%;
 }
 .videography-wrapper a {
+  position: relative;
   margin-bottom: 5%;
+  display: block;
 }
 .videography-wrapper a div {
   position: absolute;
@@ -30,7 +32,6 @@
 }
 .videography-wrapper video {
   width: 100%;
-  display: block;
 }
 .videography-footer-menu {
   padding-top: 5%;
