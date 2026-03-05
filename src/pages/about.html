@@ -80,40 +80,37 @@
       <a href="/" class="dark-hover">Home</a>
     </div>
   </body>
-  <script>
-    const flyFigure = document.getElementById("about-fly-figure");
+ <script>
+  const flyFigure = document.getElementById("about-fly-figure");
+  const first_title = document.getElementById("first-title");
+  const last_title = document.getElementById("last-title");
+  
+  const defaultTop = "34%";
+  const middleTop = "50%";
+  
+  window.addEventListener("scroll", function() {
     const figure_rect = flyFigure.getBoundingClientRect();
-    const first_title = document.getElementById("first-title");
     const title_rect = first_title.getBoundingClientRect();
-    const last_title = document.getElementById("last-title");
     const last_rect = last_title.getBoundingClientRect();
-
+    
     const figure_y = figure_rect.top + window.scrollY;
     const title_y = title_rect.top + window.scrollY;
-    const last_title_y = last_rect.y + window.scrollY;
-
-    console.log("Last_rect_top " + last_title_y)
-
-    const opacity_value = figure_y > title_y ? 1 : 0;
+    const last_title_y = last_rect.top + window.scrollY;
+    
+    const opacity_value = figure_y > title_y ? 1 : 1 - (title_y - figure_y) / 700;
     flyFigure.style.opacity = opacity_value;
-
-    window.addEventListener("scroll", function (event) {
-      const figure_y = figure_rect.top + window.scrollY;
-
-      const opacity_value =
-        figure_y > title_y ? 1 : 1 - (title_y - figure_y) / 700;
-              flyFigure.style.opacity = opacity_value;
-
-      if (title_y > figure_y && title_y - figure_y < 500) {
-        flyFigure.style.top = "50%";
-      } else if (title_y > figure_y && title_y - figure_y > 500) {
-        flyFigure.style.top = "34%";
-      }
-
-      if (figure_y > last_title_y) {
-        flyFigure.style.top = last_title_y - window.scrollY + "px"
-      }
-      console.log(figure_y > last_title_y);
-    });
-  </script>
+    
+    // Позиционирование
+    if (figure_y > last_title_y) {
+      // ДОЛЕТЕЛ ДО НИЗА - фиксируем в пикселях
+      flyFigure.style.top = (last_rect.top) + "px";
+    } else if (title_y > figure_y && title_y - figure_y < 500) {
+      // В промежуточной зоне
+      flyFigure.style.top = middleTop;
+    } else if (title_y > figure_y && title_y - figure_y > 500) {
+      // В верхней зоне
+      flyFigure.style.top = defaultTop;
+    }
+  });
+</script>
 </html>
